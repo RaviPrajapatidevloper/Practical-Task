@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemLayout"
+   android:padding="10dp"
+    android:background="@color/white">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/repositoryNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toStartOf="@+id/bookmarkImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="Coles Batemans Bay Coles Batemans Bay" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/starImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_star"
+        app:layout_constraintTop_toBottomOf="@+id/repositoryNameTextView"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/countNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+      app:layout_constraintStart_toEndOf="@+id/starImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/starImageView"
+         app:layout_constraintTop_toTopOf="@+id/starImageView"
+        tools:text="5555" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bookmarkImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_unselect_bookmark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/repositoryNameTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
